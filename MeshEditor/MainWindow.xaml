@@ -1,0 +1,49 @@
+﻿<Window x:Class="MeshEditor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MeshEditor"
+        mc:Ignorable="d"
+        Title="MeshEditor" Height="350" Width="525" WindowState="Maximized">
+    <StackPanel>
+        <Menu>
+            <MenuItem Header="_File">
+                <MenuItem Header="New"/>
+                <MenuItem Header="_Open" Name="mOpen" Click="Open" InputGestureText="Ctrl+O"/>
+                <MenuItem Header="Save" Name="mSave" Click="Save"/>
+                <MenuItem Header="Save As" Name="mSaveAs" Click="SaveAs"></MenuItem>
+                <MenuItem Header="Exit" Name="mExit"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="_Tools">
+                <MenuItem Header="Compile" Name="mCompile" Click="Compile"/>
+                <MenuItem Header="Run" Name="mRun"></MenuItem>
+                <MenuItem Header="Document" Name="mDocument" Click="Document"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <TextBox Height="900" Name="mTextBox" TextWrapping="Wrap" AcceptsReturn="True"></TextBox>
+        <ListBox Height="219" Background="Beige" Name="mListBox"></ListBox>
+    </StackPanel>
+    <!--<DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File">
+                <MenuItem Header="New"/>
+                <MenuItem Header="_Open" Name="mOpen" Click="Open" InputGestureText="Ctrl+O"/>
+                <MenuItem Header="Save" Name="mSave" Click="Save"/>
+                <MenuItem Header="Save As" Name="mSaveAs" Click="SaveAs"></MenuItem>
+                <MenuItem Header="Exit" Name="mExit"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="_Tools">
+                <MenuItem Header="Compile" Name="mCompile" Click="Compile"/>
+                <MenuItem Header="Run" Name="mRun"></MenuItem>
+                <MenuItem Header="Document" Name="mDocument" Click="Document"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <StackPanel>
+            <TextBox Height="200" Name="mTextBox" TextWrapping="Wrap" AcceptsReturn="True"></TextBox>
+            <ListBox Height="101" Background="Beige" Name="mListBox"></ListBox>
+        </StackPanel>
+        <ListBox DockPanel.Dock="Bott" Background="Beige" Name="mListBox" Margin="0,199,0,0" Height="100"/>
+        <TextBox Name="mTextBox" Margin="0,0,0,-187"/>
+    </DockPanel>-->
+</Window>
